@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — DecodeFood</title>
+  <meta name="description" content="DecodeFood Privacy Policy. Your data never leaves your device." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
+            <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
+            <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+          </svg>
+        </div>
+        <span>DecodeFood</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#" class="btn btn-sm">Get the App</a>
+      </div>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html" onclick="closeMenu()">Home</a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="contact.html" onclick="closeMenu()">Contact</a>
+      <a href="privacy.html" onclick="closeMenu()">Privacy</a>
+      <a href="terms.html" onclick="closeMenu()">Terms</a>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="page-header">
+        <div class="section-label">Legal</div>
+        <h1 class="page-title">Privacy Policy</h1>
+        <p class="page-effective">Effective Date: March 20, 2026</p>
+      </div>
+
+      <div class="legal-content">
+
+        <div class="legal-callout green">
+          <strong>The short version:</strong> DecodeFood does not require an account, does not collect your personal information, and does not upload your dietary profile to any server. Everything stays on your device.
+        </div>
+
+        <section class="legal-section">
+          <h2>1. Who We Are</h2>
+          <p>DecodeFood is a food label translation and ingredient analysis application for Android. The app is developed and maintained independently. For questions about this Privacy Policy, contact us at <a href="mailto:hello@decodefood.app">hello@decodefood.app</a>.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>2. Data We Collect</h2>
+          <p>DecodeFood is designed to function without requiring a user account. We do not collect names, email addresses, or phone numbers.</p>
+
+          <h3>2.1 Dietary Profile (Sensitive Health Data)</h3>
+          <p>Information you provide about your diet mode, allergies, intolerances, and custom ingredient flags is classified as sensitive health data. This information is stored <strong>locally on your device only</strong>. It is never transmitted to our servers, never uploaded to any third-party service, and never used for advertising or profiling purposes.</p>
+
+          <h3>2.2 Camera Data</h3>
+          <p>Your camera is used solely to capture images of ingredient labels for real-time on-device analysis. Images are processed in your device's temporary memory and are not stored, saved, or uploaded to any server. Camera access is requested at runtime and can be revoked at any time in your device settings.</p>
+
+          <h3>2.3 Barcode Lookup</h3>
+          <p>When you scan a product barcode, the barcode number is sent to the Open Food Facts API (a non-profit, open-source database) to retrieve ingredient information. The barcode number itself does not contain any personally identifiable information. No user profile data is included in this request.</p>
+
+          <h3>2.4 Usage Analytics</h3>
+          <p>DecodeFood does not currently use any analytics SDK. We do not collect crash reports, session data, or feature usage statistics through third-party tools.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>3. How Data Is Stored and Retained</h2>
+          <p>Your dietary profile preferences are saved in a local file on your smartphone using Android's standard secure storage mechanisms. Data retention is entirely under your control:</p>
+          <ul>
+            <li>Your profile remains on your device until you modify it in the app or uninstall the app.</li>
+            <li>Because we do not store your data on any server, we cannot recover your profile if the app is deleted.</li>
+            <li>You have the right to delete your data at any time by clearing the app's data in your Android device settings, or by uninstalling the app.</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2>4. Third-Party Services</h2>
+          <p>DecodeFood uses one third-party data service:</p>
+          <ul>
+            <li><strong>Open Food Facts</strong> — an open-source, non-profit food product database. Barcode numbers are sent to this service during barcode scans. No personal data is included. Open Food Facts has its own Privacy Policy available at <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">world.openfoodfacts.org/privacy</a>.</li>
+          </ul>
+          <p>We do not use advertising networks, analytics trackers, social login SDKs, or any other third-party service that collects personal data.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>5. Advertising</h2>
+          <p>DecodeFood contains no advertisements. We do not use the Android Advertising ID (AdID). We do not share any data with advertising networks or data brokers.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>6. Children's Privacy</h2>
+          <p>DecodeFood does not knowingly collect personal data from children under the age of 13. The app does not include any features directed at children. If you believe a child has provided personal information through the app, please contact us at <a href="mailto:hello@decodefood.app">hello@decodefood.app</a>.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>7. Your Rights</h2>
+          <p>Because all data is stored locally on your device, you have full control at all times. You may:</p>
+          <ul>
+            <li>Access your profile data at any time within the app's Dietary Profile screen</li>
+            <li>Modify or delete any profile data within the app</li>
+            <li>Delete all app data by clearing storage in Android Settings → Apps → DecodeFood → Storage → Clear Data</li>
+            <li>Request deletion by uninstalling the app (all local data is removed)</li>
+          </ul>
+          <p>For any questions about your rights or this policy, contact us at <a href="mailto:hello@decodefood.app">hello@decodefood.app</a>.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>8. Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. When we do, we will update the Effective Date at the top of this page and notify users through an in-app notice or Play Store update description. Your continued use of the app after changes are posted constitutes your acceptance of the updated policy.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>9. Contact</h2>
+          <p>Questions about this Privacy Policy? Contact us:</p>
+          <p><strong>Email:</strong> <a href="mailto:hello@decodefood.app">hello@decodefood.app</a><br>
+          <strong>App:</strong> DecodeFood<br>
+          <strong>Website:</strong> <a href="https://decodefood.app">decodefood.app</a></p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
+                <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
+                <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+              </svg>
+            </div>
+            <span>DecodeFood</span>
+          </a>
+          <p>Empowering consumers with clinical transparency.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="footer-col-label">Product</div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-label">Legal</div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 DecodeFood. All rights reserved.</span>
+        <span class="footer-tagline">Designed for transparency.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
