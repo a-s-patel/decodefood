@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — DecodeFood</title>
+  <meta name="description" content="Why we built DecodeFood and how the analysis engine works." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
+            <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
+            <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+          </svg>
+        </div>
+        <span>DecodeFood</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#" class="btn btn-sm">Get the App</a>
+      </div>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html" onclick="closeMenu()">Home</a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="contact.html" onclick="closeMenu()">Contact</a>
+      <a href="privacy.html" onclick="closeMenu()">Privacy</a>
+      <a href="terms.html" onclick="closeMenu()">Terms</a>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="page-header">
+        <div class="section-label">About DecodeFood</div>
+        <h1 class="page-title">Built for the curious consumer.</h1>
+      </div>
+
+      <div class="prose-content">
+
+        <section class="prose-section">
+          <h2>Why We Built This</h2>
+          <p>Food labels are designed to be confusing. Between complex chemical names, misleading marketing claims, and industrial additives with regulatory-approved aliases, it's nearly impossible for the average consumer to know what they're actually putting in their body.</p>
+          <p>We saw a gap between scientific research and consumer knowledge. Most apps in this space use proprietary algorithms to "score" food, which introduces bias and removes your agency. You end up trusting a colored circle instead of understanding the actual ingredient.</p>
+          <p>We wanted to build something fundamentally different — a tool that acts as a clinical translation layer between food chemistry and the kitchen table. Not a judge. Not a scorecard. A decoder.</p>
+        </section>
+
+        <div class="prose-divider"></div>
+
+        <section class="prose-section">
+          <h2>The "Honest Advisor" Approach</h2>
+          <p>Unlike other scanners that use "black-box" scoring systems to label foods as healthy or unhealthy, DecodeFood is an objective translation tool. Our Parallel Analysis Engine checks ingredients against your personal dietary profile — whether that involves life-threatening allergies, lifestyle diets like veganism, or a simple desire to avoid industrial additives.</p>
+          <p>The result isn't a score. It's a breakdown. We provide the science, the regulatory status, and the plain-English explanation for every flagged ingredient. Your data stays on your phone, the logic stays transparent, and the power stays with you.</p>
+        </section>
+
+        <div class="prose-divider"></div>
+
+        <section class="prose-section">
+          <h2>How It Works</h2>
+          <p>When you scan a label, DecodeFood performs a multi-layered Parallel Analysis in real time:</p>
+
+          <div class="how-steps">
+            <div class="how-step">
+              <div class="how-step-num">01</div>
+              <div class="how-step-content">
+                <h4>Capture</h4>
+                <p>The camera reads the ingredient list via on-device OCR, or scans a barcode to retrieve data from the Open Food Facts database. You can also type ingredients manually.</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">02</div>
+              <div class="how-step-content">
+                <h4>Analyze</h4>
+                <p>The Parallel Pipeline checks every ingredient simultaneously across three layers: your personal allergy & intolerance profile, your dietary mode (Vegan, Vegetarian, Pescatarian, etc.), and the NOVA ultra-processing scale.</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">03</div>
+              <div class="how-step-content">
+                <h4>Explain</h4>
+                <p>Flagged ingredients surface with a plain-language explanation: what it is, why it's in the product, and what it does in the body. Science-based, not clickbait.</p>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">04</div>
+              <div class="how-step-content">
+                <h4>Decide</h4>
+                <p>You get the facts. The decision is always yours. DecodeFood never tells you what to eat or ranks foods against each other.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="prose-divider"></div>
+
+        <section class="prose-section">
+          <h2>What We Don't Do</h2>
+          <div class="dont-list">
+            <div class="dont-item">
+              <span class="dont-x">✗</span>
+              <span>Assign arbitrary health scores or ratings</span>
+            </div>
+            <div class="dont-item">
+              <span class="dont-x">✗</span>
+              <span>Tell you a food is "good" or "bad"</span>
+            </div>
+            <div class="dont-item">
+              <span class="dont-x">✗</span>
+              <span>Recommend alternative products to buy</span>
+            </div>
+            <div class="dont-item">
+              <span class="dont-x">✗</span>
+              <span>Collect, store, or transmit your dietary profile</span>
+            </div>
+            <div class="dont-item">
+              <span class="dont-x">✗</span>
+              <span>Require an account or login</span>
+            </div>
+            <div class="dont-item">
+              <span class="dont-x">✗</span>
+              <span>Use advertising or sponsored results</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
+                <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
+                <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+              </svg>
+            </div>
+            <span>DecodeFood</span>
+          </a>
+          <p>Empowering consumers with clinical transparency.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="footer-col-label">Product</div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-label">Legal</div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 DecodeFood. All rights reserved.</span>
+        <span class="footer-tagline">Designed for transparency.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
