@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — DecodeFood</title>
+  <meta name="description" content="Get in touch with the DecodeFood team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
+            <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
+            <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+          </svg>
+        </div>
+        <span>DecodeFood</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="#" class="btn btn-sm">Get the App</a>
+      </div>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html" onclick="closeMenu()">Home</a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="contact.html" onclick="closeMenu()">Contact</a>
+      <a href="privacy.html" onclick="closeMenu()">Privacy</a>
+      <a href="terms.html" onclick="closeMenu()">Terms</a>
+    </div>
+  </nav>
+
+  <main class="page-main contact-main">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="section-label">Contact</div>
+        <h1 class="page-title">Get in touch.</h1>
+        <p class="contact-sub">Have questions about data sources, the analysis engine, or privacy? We read every email.</p>
+
+        <a href="mailto:hello@decodefood.app" class="contact-email">
+          hello@decodefood.app
+        </a>
+
+        <p class="contact-note">We typically respond within 24–48 business hours.</p>
+
+        <div class="contact-topics">
+          <div class="contact-topic">
+            <div class="topic-icon">🔬</div>
+            <div>
+              <strong>Science & Data</strong>
+              <p>Questions about ingredient classifications, our analysis methodology, or data sources.</p>
+            </div>
+          </div>
+          <div class="contact-topic">
+            <div class="topic-icon">🛡️</div>
+            <div>
+              <strong>Privacy & Security</strong>
+              <p>Questions about data handling, what's stored on your device, or our privacy practices.</p>
+            </div>
+          </div>
+          <div class="contact-topic">
+            <div class="topic-icon">🐛</div>
+            <div>
+              <strong>Bug Reports</strong>
+              <p>Found something that doesn't work right? Tell us exactly what happened and we'll look into it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
+                <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
+                <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+              </svg>
+            </div>
+            <span>DecodeFood</span>
+          </a>
+          <p>Empowering consumers with clinical transparency.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="footer-col-label">Product</div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-label">Legal</div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 DecodeFood. All rights reserved.</span>
+        <span class="footer-tagline">Designed for transparency.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
