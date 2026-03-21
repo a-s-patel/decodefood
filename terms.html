@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — DecodeFood</title>
+  <meta name="description" content="DecodeFood Terms of Service and Medical Disclaimer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
+            <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
+            <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+          </svg>
+        </div>
+        <span>DecodeFood</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#" class="btn btn-sm">Get the App</a>
+      </div>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html" onclick="closeMenu()">Home</a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="contact.html" onclick="closeMenu()">Contact</a>
+      <a href="privacy.html" onclick="closeMenu()">Privacy</a>
+      <a href="terms.html" onclick="closeMenu()">Terms</a>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="page-header">
+        <div class="section-label">Legal</div>
+        <h1 class="page-title">Terms of Service<br><span style="font-style:italic;font-weight:300">& Medical Disclaimer</span></h1>
+        <p class="page-effective">Effective Date: March 20, 2026</p>
+      </div>
+
+      <div class="legal-content">
+
+        <div class="legal-callout green">
+          <strong>Our philosophy on these terms:</strong> At DecodeFood, our mission is to give you more information, not less. Part of that honesty means being completely transparent about what this app can and cannot do. The terms below exist to ensure you always remain the final authority over your own dietary decisions. No app, however sophisticated, replaces your own careful reading of a food label.
+        </div>
+
+        <p style="margin-bottom:2rem;">By downloading, installing, or using DecodeFood ("the App"), you agree to be bound by these Terms of Service. If you do not agree, do not use the App.</p>
+
+        <section class="legal-section">
+          <h2>1. Nature of the App — Informational Tool Only</h2>
+          <p><em>We built DecodeFood to translate food labels into plain language. That's it. We are not doctors, dietitians, or allergen specialists. We are a translation tool.</em></p>
+          <p>DecodeFood is a food label translation and ingredient analysis tool designed for informational and educational purposes only. It is not a medical device, a certified allergen detection system, or a substitute for professional medical, dietary, or nutritional advice.</p>
+          <p>Nothing in the App constitutes medical advice. If you have a diagnosed medical condition, severe food allergy, or any health concern that requires dietary management, you must consult a qualified healthcare professional before relying on any information provided by the App.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>2. Scope of Analysis — What the App Does and Does Not Read</h2>
+          <p><em>This is one of the most important things to understand about DecodeFood. We are completely honest about where our analysis starts and stops.</em></p>
+
+          <h3>2.1 What DecodeFood Analyzes</h3>
+          <p>DecodeFood analyzes the <strong>Ingredients List</strong> section of a food label only. This includes:</p>
+          <ul>
+            <li>Ingredient names captured via on-device OCR (camera scan)</li>
+            <li>Ingredient names retrieved from third-party barcode databases (Open Food Facts API)</li>
+            <li>Ingredient names entered manually by the user</li>
+          </ul>
+
+          <h3>2.2 What DecodeFood Does NOT Currently Analyze</h3>
+          <p>DecodeFood does not currently parse, interpret, or analyze the following sections of a food label, even if they are visible in a camera scan:</p>
+          <ul>
+            <li>"Contains:" statements (e.g., "Contains: Wheat, Milk, Soy")</li>
+            <li>"May Contain:" statements (e.g., "May Contain: Peanuts")</li>
+            <li>"Allergen Information:" sections</li>
+            <li>"Processed on equipment that also handles..." statements</li>
+            <li>"Manufactured in a facility that also processes..." statements</li>
+            <li>Nutrition facts panels</li>
+            <li>Serving size or quantity information</li>
+            <li>Expiration dates or lot codes</li>
+          </ul>
+
+          <div class="legal-callout red">
+            <strong>⚠ Critical — Severe Allergy Users:</strong> Cross-contamination warnings ("May Contain", "Processed in a facility") are NOT analyzed by DecodeFood. If you have a severe or life-threatening food allergy, you MUST read the full physical packaging label yourself and must not rely solely on the App for cross-contamination safety.
+          </div>
+        </section>
+
+        <section class="legal-section">
+          <h2>3. Third-Party Data Accuracy</h2>
+          <p><em>We use the best available data sources, but we are honest that no database is perfect. This is why we always encourage you to read the physical label.</em></p>
+          <p>When you scan a product barcode, DecodeFood retrieves ingredient data from the Open Food Facts database, a crowd-sourced, non-profit third-party service. DecodeFood has no control over the accuracy, completeness, or currency of data in that database.</p>
+          <p>Third-party ingredient data may contain errors, omissions, outdated information, or product variants that differ from the physical product you are holding. DecodeFood does not independently verify third-party data.</p>
+          <p>When you scan a label using the camera OCR feature, accuracy depends on the quality of the image, lighting conditions, label font, label damage, and the clarity of the printed text. OCR technology may misread, skip, or incorrectly parse some ingredients.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>4. Assumption of Risk and User Responsibility</h2>
+          <p><em>You are the expert on your own body. We are here to help you decode what's on a label — but the final decision about what you eat is always yours.</em></p>
+          <p>By using DecodeFood, you acknowledge and agree that:</p>
+          <ul>
+            <li>You are solely responsible for your own health and dietary decisions</li>
+            <li>You will always read the full physical packaging label before consuming any product, regardless of the App's analysis</li>
+            <li>You will not rely solely on the App for any life-critical dietary decision, including decisions related to severe food allergies, anaphylaxis risk, or medically prescribed dietary restrictions</li>
+            <li>You understand that the App analyzes the Ingredients List only and does not parse "May Contain," "Contains," or facility cross-contamination warnings</li>
+            <li>You will ensure your personal allergy and intolerance profile in the App is accurate, up to date, and complete</li>
+            <li>You accept that no mobile application can guarantee 100% detection of every allergen or harmful ingredient in every product under all circumstances</li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2>5. Limitation of Liability</h2>
+          <p>To the maximum extent permitted by applicable law, DecodeFood and its developers, officers, employees, and affiliates shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages of any kind, including but not limited to:</p>
+          <ul>
+            <li>Illness, allergic reaction, anaphylaxis, injury, or death resulting from the consumption of a food product</li>
+            <li>Reliance on App analysis results, ingredient data, or verdict classifications</li>
+            <li>Errors, omissions, or inaccuracies in third-party barcode or ingredient databases</li>
+            <li>Failure of OCR technology to correctly identify one or more ingredients</li>
+            <li>Failure to detect ingredients not present in the scanned Ingredients List section</li>
+            <li>User failure to read "May Contain," "Contains," or facility cross-contamination warnings on the physical product packaging</li>
+            <li>Use of the App outside its intended informational purpose</li>
+          </ul>
+          <p>This limitation of liability applies regardless of the theory of liability (contract, tort, negligence, strict liability, or otherwise) and regardless of whether DecodeFood has been advised of the possibility of such damages.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>6. No Warranty</h2>
+          <p>DecodeFood is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+          <p>We do not warrant that the App will be error-free, uninterrupted, or that any specific ingredient will be detected or correctly classified in any particular scan.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>7. Indemnification</h2>
+          <p>You agree to indemnify, defend, and hold harmless DecodeFood and its developers from any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising from your use of the App, your violation of these Terms, or your reliance on App data for a dietary decision.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>8. Changes to These Terms</h2>
+          <p>We may update these Terms of Service from time to time. When we do, we will update the Effective Date at the top of this document and notify users through an in-app notice or Play Store update description. Your continued use of the App after changes are posted constitutes your acceptance of the updated Terms.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>9. Governing Law</h2>
+          <p>These Terms of Service shall be governed by and construed in accordance with the laws of the United States and the state in which the developer is domiciled, without regard to its conflict of law provisions.</p>
+        </section>
+
+        <section class="legal-section">
+          <h2>10. Contact</h2>
+          <p>Questions about these Terms? Contact us:</p>
+          <p><strong>Email:</strong> <a href="mailto:hello@decodefood.app">hello@decodefood.app</a><br>
+          <strong>App:</strong> DecodeFood<br>
+          <strong>Website:</strong> <a href="https://decodefood.app">decodefood.app</a></p>
+          <p>By using DecodeFood, you confirm that you have read, understood, and agree to these Terms of Service and Medical Disclaimer.</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-icon">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
+                <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
+                <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+              </svg>
+            </div>
+            <span>DecodeFood</span>
+          </a>
+          <p>Empowering consumers with clinical transparency.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="footer-col-label">Product</div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-label">Legal</div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 DecodeFood. All rights reserved.</span>
+        <span class="footer-tagline">Designed for transparency.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
