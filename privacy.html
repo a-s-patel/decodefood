@@ -94,7 +94,7 @@
           <p>Your camera is used solely to capture images of ingredient labels for real-time on-device analysis. Images are processed in your device's temporary memory and are not stored, saved, or uploaded to any server. Camera access is requested at runtime and can be revoked at any time in your device settings.</p>
 
           <h3>2.3 Barcode Lookup</h3>
-          <p>When you scan a product barcode, the barcode number is sent to the Open Food Facts API (a non-profit, open-source database) to retrieve ingredient information. The barcode number itself does not contain any personally identifiable information. No user profile data is included in this request.</p>
+          <p>When you scan a product barcode, the barcode number is sent to the Open Food Facts API (a non-profit, open-source database) to retrieve ingredient information. If Open Food Facts does not have a match, the barcode number is then sent to the USDA Branded Foods API (a public database maintained by the U.S. Department of Agriculture) as a fallback. The barcode number itself does not contain any personally identifiable information. No user profile data is included in either request.</p>
 
           <h3>2.4 Usage Analytics</h3>
           <p>DecodeFood uses Google Analytics to collect anonymous, non-identifiable usage statistics such as page visits and general navigation patterns. This data is used solely to improve the website experience. No personal information, dietary profile data, or device-specific identifiers are collected through this service. You can opt out at any time using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</p>
@@ -115,6 +115,7 @@
           <p>DecodeFood uses the following third-party services:</p>
           <ul>
             <li><strong>Open Food Facts</strong> — an open-source, non-profit food product database. Barcode numbers are sent to this service during barcode scans. No personal data is included. Open Food Facts has its own Privacy Policy available at <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">world.openfoodfacts.org/privacy</a>.</li>
+            <li><strong>USDA Branded Foods API</strong> — a public database maintained by the U.S. Department of Agriculture. Barcode numbers are sent to this service only when Open Food Facts returns no result. No personal data is included. This service is operated by the U.S. federal government under api.data.gov.</li>
             <li><strong>Google Play Billing</strong> — used to process in-app subscription purchases (DecodeFood Premium). Payment information is handled entirely by Google Play and is subject to Google's Privacy Policy. DecodeFood does not receive, store, or process payment card details directly.</li>
           </ul>
           <p>We do not use advertising networks, social login SDKs, or any other third-party service that collects personal data.</p>
