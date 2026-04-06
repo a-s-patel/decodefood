@@ -95,7 +95,7 @@
           <p>DecodeFood analyzes the <strong>Ingredients List</strong> section of a food label only. This includes:</p>
           <ul>
             <li>Ingredient names captured via on-device OCR (camera scan)</li>
-            <li>Ingredient names retrieved from third-party barcode databases (Open Food Facts API)</li>
+            <li>Ingredient names retrieved from third-party barcode databases (Open Food Facts API and USDA Branded Foods API)</li>
             <li>Ingredient names entered manually by the user</li>
           </ul>
 
@@ -120,7 +120,7 @@
         <section class="legal-section">
           <h2>3. Third-Party Data Accuracy</h2>
           <p><em>We use the best available data sources, but we are honest that no database is perfect. This is why we always encourage you to read the physical label.</em></p>
-          <p>When you scan a product barcode, DecodeFood retrieves ingredient data from the Open Food Facts database, a crowd-sourced, non-profit third-party service. DecodeFood has no control over the accuracy, completeness, or currency of data in that database.</p>
+          <p>When you scan a product barcode, DecodeFood retrieves ingredient data from the Open Food Facts database (a crowd-sourced, non-profit third-party service) and, as a fallback, the USDA Branded Foods API (a public U.S. government database). DecodeFood has no control over the accuracy, completeness, or currency of data in either database.</p>
           <p>Third-party ingredient data may contain errors, omissions, outdated information, or product variants that differ from the physical product you are holding. DecodeFood does not independently verify third-party data.</p>
           <p>When you scan a label using the camera OCR feature, accuracy depends on the quality of the image, lighting conditions, label font, label damage, and the clarity of the printed text. OCR technology may misread, skip, or incorrectly parse some ingredients.</p>
         </section>
