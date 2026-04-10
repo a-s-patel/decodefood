@@ -21,8 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QGWBRZB8E3"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGWBRZB8E3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -96,8 +95,15 @@
           <h3>2.3 Barcode Lookup</h3>
           <p>When you scan a product barcode, the barcode number is sent to the Open Food Facts API (a non-profit, open-source database) to retrieve ingredient information. If Open Food Facts does not have a match, the barcode number is then sent to the USDA Branded Foods API (a public database maintained by the U.S. Department of Agriculture) as a fallback. The barcode number itself does not contain any personally identifiable information. No user profile data is included in either request.</p>
 
-          <h3>2.4 Usage Analytics</h3>
-          <p>DecodeFood uses Google Analytics to collect anonymous, non-identifiable usage statistics such as page visits and general navigation patterns. This data is used solely to improve the website experience. No personal information, dietary profile data, or device-specific identifiers are collected through this service. You can opt out at any time using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</p>
+          <h3>2.4 In-App Usage Analytics</h3>
+          <p>DecodeFood uses Firebase Analytics (provided by Google) to collect anonymous, non-identifiable usage statistics within the app. This data helps us understand how the app is used so we can improve it.</p>
+          <p><strong>What is collected:</strong> Anonymous event data such as feature interactions (e.g., "scan started," "paywall viewed"), app open counts, and session duration. Events are tagged with an anonymous device identifier — not your name, email, or any personal information.</p>
+          <p><strong>What is never collected:</strong> Your dietary profile, your allergen or intolerance data, your custom flags, your scan history, or any ingredient data you enter into the app.</p>
+          <p><strong>Where it is stored:</strong> Anonymous analytics data is stored on Google's servers in accordance with Google's Privacy Policy (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>).</p>
+          <p><strong>Your control:</strong> You can reset your anonymous analytics identifier at any time in the app under Settings → Dietary Profile → Privacy & Data → Reset Analytics ID. This permanently unlinks all past usage events from your device and assigns a new anonymous identifier going forward.</p>
+
+          <h3>2.5 Website Analytics</h3>
+          <p>The DecodeFood website uses Google Analytics to collect anonymous page visit and navigation data. This is separate from in-app analytics. You can opt out using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</p>
         </section>
 
         <section class="legal-section">
@@ -107,6 +113,7 @@
             <li>Your profile remains on your device until you modify it in the app or uninstall the app.</li>
             <li>Because we do not store your data on any server, we cannot recover your profile if the app is deleted.</li>
             <li>You have the right to delete your data at any time by clearing the app's data in your Android device settings, or by uninstalling the app.</li>
+            <li>Anonymous analytics data transmitted to Firebase Analytics is retained by Google for up to 14 months by default, after which it is automatically deleted from Google's servers. You can reset your anonymous analytics ID at any time within the app, which immediately dissociates all past events from your device.</li>
           </ul>
         </section>
 
@@ -125,6 +132,9 @@
           <h2>5. Advertising</h2>
           <p>DecodeFood contains no advertisements and does not use advertising networks or data brokers.</p>
           <p><strong>Android Advertising ID (AdID):</strong> DecodeFood does not use the Android Advertising ID for advertising or analytics purposes. On devices running Android 13 (API 33) or higher, the app does not request or access the Advertising ID. No AdID data is collected, stored, or shared with any third party.</p>
+          
+          <h3>5.1 No Sale of Data</h3>
+          <p>DecodeFood does not sell, rent, lease, or trade personal information to any third party, ever. This applies to both in-app data and website data.</p>
         </section>
 
         <section class="legal-section">
@@ -139,6 +149,7 @@
             <li>Access your profile data at any time within the app's Dietary Profile screen</li>
             <li>Modify or delete any profile data within the app</li>
             <li>Delete all app data by clearing storage in Android Settings → Apps → DecodeFood → Storage → Clear Data</li>
+            <li>You can also manage your data directly within the app under Settings → Dietary Profile → Privacy & Data, where you can reset your analytics ID, clear your scan history, or delete all app data with a single action.</li>
             <li>Request deletion by uninstalling the app (all local data is removed)</li>
           </ul>
           <p>For any questions about your rights or this policy, contact us at <a href="mailto:hello@decodefood.app">hello@decodefood.app</a>.</p>
