@@ -1,4 +1,4 @@
-/* DecodeFood — homepage (dark, cinematic). Self-contained: index.html does not load style.css. */
+/* DecodeFood — homepage (dark, cinematic). Base styles, nav and footer shared by every page. */
 
 :root {
   color-scheme: dark;
