@@ -13,14 +13,16 @@
   <meta property="og:site_name" content="DecodeFood" />
   <meta name="robots" content="noindex, follow" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#07090a" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="inner.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGWBRZB8E3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -32,38 +34,40 @@
 </head>
 <body>
 
-  <nav class="nav">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <div class="logo-icon">
+      <a href="/" class="logo" aria-label="DecodeFood home">
+        <span class="logo-icon" aria-hidden="true">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
-            <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
-            <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+            <rect x="1" y="1" width="3" height="12" rx="1" fill="#04130a"/>
+            <rect x="6" y="1" width="2" height="12" rx="1" fill="#04130a"/>
+            <rect x="10" y="1" width="3" height="12" rx="1" fill="#04130a"/>
           </svg>
-        </div>
+        </span>
         <span>DecodeFood</span>
       </a>
-      <div class="nav-links">
+      <nav class="nav-links" aria-label="Primary">
         <a href="/" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="#" class="btn btn-sm">Get the App</a>
-      </div>
-      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+        <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=nav_cta" class="btn btn-sm">Get the App</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
     </div>
-    <div class="nav-mobile" id="mobileMenu">
-      <a href="/" onclick="closeMenu()">Home</a>
-      <a href="about.html" onclick="closeMenu()">About</a>
-      <a href="contact.html" onclick="closeMenu()">Contact</a>
-      <a href="privacy.html" onclick="closeMenu()">Privacy</a>
-      <a href="terms.html" onclick="closeMenu()">Terms</a>
-    </div>
-  </nav>
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile">
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=mobile_menu" class="btn">Download on Google Play</a>
+    </nav>
+  </header>
 
-  <main class="page-main">
+  <main id="main" class="page-main">
     <div class="container">
       <div class="page-header">
         <div class="section-label">Legal</div>
@@ -172,21 +176,22 @@
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="/" class="nav-logo">
-            <div class="logo-icon">
+          <a href="/" class="logo">
+            <span class="logo-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
-                <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
-                <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+                <rect x="1" y="1" width="3" height="12" rx="1" fill="#04130a"/>
+                <rect x="6" y="1" width="2" height="12" rx="1" fill="#04130a"/>
+                <rect x="10" y="1" width="3" height="12" rx="1" fill="#04130a"/>
               </svg>
-            </div>
+            </span>
             <span>DecodeFood</span>
           </a>
-          <p>Empowering consumers with clinical transparency.</p>
+          <p>Empowering consumers with clinical transparency. Scan labels, understand ingredients, make informed choices.</p>
         </div>
         <div class="footer-links">
           <div class="footer-col">
@@ -209,6 +214,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>

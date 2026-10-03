@@ -1,0 +1,85 @@
+/* DecodeFood — inner pages (About, Contact, Privacy, Terms). Loaded after home.css, which supplies tokens, nav and footer. */
+
+.page-main { padding: 150px 0 96px; position: relative; }
+.page-main::before {
+  content: ''; position: absolute; left: 50%; top: -10%; translate: -50% 0; z-index: -1;
+  width: min(1100px, 130vw); height: 620px; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(34,197,94,0.16), transparent 72%);
+}
+
+.section-label { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--green); margin-bottom: 18px; }
+
+.page-header { margin-bottom: 64px; padding-bottom: 48px; border-bottom: 1px solid var(--line); }
+.page-title {
+  font-family: var(--font-serif); font-weight: 400;
+  font-size: clamp(38px, 5.4vw, 72px); letter-spacing: -0.025em; line-height: 1.06;
+  margin: 0 0 16px;
+}
+.page-effective { font-size: 14px; color: var(--muted); margin-top: 8px; }
+
+/* Prose (About) */
+.prose-content { max-width: 720px; }
+.prose-section { margin-bottom: 64px; }
+.prose-section h2 { font-family: var(--font-serif); font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.015em; margin-bottom: 20px; }
+.prose-section p { font-size: 17px; color: #c9c5c0; line-height: 1.8; margin-bottom: 16px; font-weight: 300; }
+.prose-divider { width: 48px; height: 2px; background: var(--green); opacity: .6; margin: 48px 0; border-radius: 2px; }
+
+.how-steps { display: flex; flex-direction: column; gap: 18px; margin-top: 28px; }
+.how-step {
+  display: flex; gap: 24px; align-items: flex-start; padding: 24px 26px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+  transition: border-color .3s, transform .4s var(--ease);
+}
+.how-step:hover { border-color: rgba(34,197,94,0.4); transform: translateY(-3px); }
+.how-step-num { font-family: var(--font-serif); font-size: 34px; color: var(--green); line-height: 1; flex-shrink: 0; width: 52px; }
+.how-step-content h4 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+.how-step-content p { font-size: 15px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+.dont-list { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.dont-item { display: flex; align-items: center; gap: 14px; font-size: 16px; color: #c9c5c0; }
+.dont-x { color: var(--red); font-weight: 700; font-size: 18px; flex-shrink: 0; }
+
+/* Legal (Privacy, Terms) */
+.legal-content { max-width: 760px; }
+.legal-callout { padding: 20px 24px; border-radius: 16px; font-size: 15px; line-height: 1.7; margin-bottom: 40px; }
+.legal-callout.green { background: rgba(34,197,94,0.1); color: #bbf7d0; border-left: 3px solid var(--green); }
+.legal-callout.red { background: rgba(248,113,113,0.1); color: #fecaca; border-left: 3px solid var(--red); margin-top: 24px; }
+.legal-section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--line); }
+.legal-section:last-child { border-bottom: 0; }
+.legal-section h2 { font-size: 24px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 16px; }
+.legal-section h3 { font-size: 16px; font-weight: 600; margin: 24px 0 10px; color: #e7e5e4; }
+.legal-section p { font-size: 15px; color: #c9c5c0; line-height: 1.8; margin-bottom: 14px; font-weight: 300; }
+.legal-section em { font-style: italic; color: var(--muted); }
+.legal-section strong { color: var(--text); font-weight: 600; }
+.legal-section ul { margin: 12px 0 16px 20px; display: flex; flex-direction: column; gap: 8px; }
+.legal-section ul li { font-size: 15px; color: #c9c5c0; line-height: 1.7; font-weight: 300; }
+.legal-section ul li::marker { color: var(--green); }
+.legal-section a, .legal-callout a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.legal-section a:hover { color: #4ade80; }
+
+/* Contact */
+.contact-main { padding-bottom: 120px; }
+.contact-inner { max-width: 640px; }
+.contact-sub { font-size: clamp(18px, 2vw, 21px); color: var(--muted); line-height: 1.65; font-weight: 300; margin: 20px 0 48px; }
+.contact-email {
+  display: inline-block; font-size: clamp(22px, 3.4vw, 34px); font-weight: 700; color: var(--text);
+  border-bottom: 2px solid var(--green); padding-bottom: 4px; margin-bottom: 20px; transition: color .2s;
+  overflow-wrap: anywhere;
+}
+.contact-email:hover { color: var(--green); }
+.contact-note { font-size: 14px; color: var(--muted); margin-bottom: 56px; }
+.contact-topics { display: flex; flex-direction: column; gap: 16px; padding-top: 48px; border-top: 1px solid var(--line); }
+.contact-topic {
+  display: flex; gap: 20px; align-items: flex-start; padding: 22px 24px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+  transition: border-color .3s, transform .4s var(--ease);
+}
+.contact-topic:hover { border-color: rgba(34,197,94,0.4); transform: translateY(-3px); }
+.topic-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+.contact-topic strong { display: block; font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.contact-topic p { font-size: 14px; color: var(--muted); line-height: 1.65; margin: 0; }
+
+@media (max-width: 640px) {
+  .page-main { padding-top: 120px; }
+  .how-step { flex-direction: column; gap: 10px; }
+}

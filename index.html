@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07090a" />
   <title>DecodeFood — Food Label & Ingredient Scanner for Android</title>
   <meta name="description" content="DecodeFood decodes complex food labels into plain English. Scan any ingredient list, get instant alerts for your diet and allergies, and understand what's actually in your food. Free on Android." />
 
@@ -52,196 +53,15 @@
 }
 </script>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Hero layout override for illustration */
-    .hero .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-    .hero-illustration {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }
-    .hero-illustration img {
-      width: 100%;
-      max-width: 440px;
-      height: auto;
-      border-radius: 20px;
-    }
-    .hero-scan-float {
-      position: absolute;
-      bottom: 20px;
-      right: -8px;
-      background: white;
-      border: 1px solid #e7e5e4;
-      border-radius: 14px;
-      padding: 14px 18px;
-      width: 210px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-    }
-    .hero-scan-float .result-verdict { font-size: 11px; margin-bottom: 8px; }
-    .hero-scan-float .result-item { font-size: 12px; }
-
-    /* Who section */
-    .who-section { padding: 96px 0; background: #fff; }
-    .who-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-    .who-text .section-label { margin-bottom: 16px; }
-    .who-text h2 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(30px, 3.5vw, 44px);
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 24px;
-      color: #1c1917;
-    }
-    .who-text p {
-      font-size: 17px;
-      color: #78716c;
-      line-height: 1.75;
-      margin-bottom: 16px;
-      font-weight: 300;
-    }
-    .who-illustration img {
-      width: 100%;
-      max-width: 480px;
-      height: auto;
-      border-radius: 20px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* Pattern divider */
-    .pattern-divider {
-      position: relative;
-      height: 180px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .pattern-divider img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      opacity: 0.15;
-      position: absolute;
-      top: 0; left: 0;
-    }
-    .pattern-divider-text {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-    .pattern-divider-text span {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #16a34a;
-      background: white;
-      padding: 8px 20px;
-      border-radius: 100px;
-      border: 1px solid #dcfce7;
-    }
-
-    /* Science section */
-    .science-section { padding: 96px 0; background: #fafaf9; }
-    .science-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-    .science-illustration { order: -1; }
-    .science-illustration img {
-      width: 100%;
-      max-width: 380px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    .science-text .section-label { margin-bottom: 16px; }
-    .science-text h2 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(28px, 3vw, 40px);
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: #1c1917;
-    }
-    .science-text p {
-      font-size: 16px;
-      color: #78716c;
-      line-height: 1.75;
-      font-weight: 300;
-      margin-bottom: 14px;
-    }
-    .science-points { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
-    .science-point { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #57534e; line-height: 1.55; }
-    .science-point-dot { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
-
-    /* Community section */
-    .community-section { padding: 96px 0; background: #fff; }
-    .community-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-    .community-text .section-label { margin-bottom: 16px; }
-    .community-text h2 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(28px, 3vw, 40px);
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: #1c1917;
-    }
-    .community-text p {
-      font-size: 16px;
-      color: #78716c;
-      line-height: 1.75;
-      font-weight: 300;
-      margin-bottom: 14px;
-    }
-    .community-illustration img {
-      width: 100%;
-      max-width: 480px;
-      height: auto;
-      border-radius: 20px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero .container,
-      .who-inner,
-      .science-inner,
-      .community-inner { grid-template-columns: 1fr; gap: 40px; }
-      .hero-illustration { order: -1; }
-      .science-illustration { order: 0; }
-      .hero-scan-float { display: none; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/app-dietary-profile.png" fetchpriority="high" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="home.css" />
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGWBRZB8E3"></script>
 <script>
@@ -253,282 +73,287 @@
 </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- NAV -->
-  <nav class="nav">
+  <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <div class="logo-icon">
+      <a href="/" class="logo" aria-label="DecodeFood home">
+        <span class="logo-icon" aria-hidden="true">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
-            <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
-            <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+            <rect x="1" y="1" width="3" height="12" rx="1" fill="#04130a"/>
+            <rect x="6" y="1" width="2" height="12" rx="1" fill="#04130a"/>
+            <rect x="10" y="1" width="3" height="12" rx="1" fill="#04130a"/>
           </svg>
-        </div>
+        </span>
         <span>DecodeFood</span>
       </a>
-      <div class="nav-links">
-        <a href="/" class="nav-link active">Home</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/" class="nav-link" aria-current="page">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
         <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=nav_cta" class="btn btn-sm">Get the App</a>
-      </div>
-      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
     </div>
-    <div class="nav-mobile" id="mobileMenu">
-      <a href="/" onclick="closeMenu()">Home</a>
-      <a href="about.html" onclick="closeMenu()">About</a>
-      <a href="contact.html" onclick="closeMenu()">Contact</a>
-      <a href="privacy.html" onclick="closeMenu()">Privacy</a>
-      <a href="terms.html" onclick="closeMenu()">Terms</a>
-      <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=mobile_menu" class="btn" style="text-align:center;margin-top:8px">Download on Google Play</a>
-    </div>
-  </nav>
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile">
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=mobile_menu" class="btn">Download on Google Play</a>
+    </nav>
+  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <!-- Left: text -->
-      <div>
-        <div class="hero-eyebrow">
-          <span class="pill">Now on Android</span>
-        </div>
-        <h1 class="hero-headline">
-          Know exactly what's<br>
-          <em>in your food.</em>
-        </h1>
-        <p class="hero-sub">
-          A clinical approach to food labels. No scores, no fear — just pure transparency about what you're actually eating.
-        </p>
+  <main id="main">
+
+  <!-- HERO: pinned, scroll-driven -->
+  <section class="hero" id="hero" aria-label="DecodeFood introduction">
+    <div class="hero-sticky">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="aurora"></div>
+        <div class="aurora two"></div>
+        <div class="grid-lines"></div>
+      </div>
+
+      <div class="hero-copy">
+        <span class="pill"><i></i>Now on Android</span>
+        <h1 class="hero-headline">Know exactly what's<br><em>in your food.</em></h1>
+        <p class="hero-sub">A clinical approach to food labels. No scores, no fear — just pure transparency about what you're actually eating.</p>
         <div class="hero-cta">
           <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=hero_cta" class="btn btn-lg">
-            <span aria-hidden="true" style="display:inline-flex;align-items:center;">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <polygon points="2,1 16,9 2,17" fill="white"/>
-              </svg>
-            </span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><polygon points="2,1 16,9 2,17" fill="#04130a"/></svg>
             Download on Google Play
           </a>
+          <a href="#features" class="btn btn-lg btn-ghost">See how it works</a>
           <span class="hero-note">Free · Android 8.0+</span>
         </div>
       </div>
 
-      <!-- Right: illustration + floating scan result -->
-      <div class="hero-illustration">
-        <img
-          src="images/illustration-shoppers.png"
-          alt="People grocery shopping"
-          loading="eager"
-        />
-        <div class="hero-scan-float">
-          <div class="result-verdict avoid">🔴 AVOID</div>
-          <div class="result-item"><span class="flag-red">●</span> Gelatin — Animal-derived</div>
-          <div class="result-item"><span class="flag-amber">●</span> Natural Flavors — Uncertain</div>
-          <div class="result-item"><span class="flag-green">●</span> Citric Acid — Plant-derived</div>
+      <p class="hero-caption" aria-hidden="true">Scan. Decode. <span>Decide.</span></p>
+
+      <div class="hero-stage">
+        <!-- Looping demo: label being scanned -->
+        <div class="demo-card label" aria-hidden="true">
+          <div class="demo-title">Scanning label</div>
+          <ul class="ing-list">
+            <li class="ing">Sugar</li>
+            <li class="ing bad">Gelatin</li>
+            <li class="ing warn">Natural Flavors</li>
+            <li class="ing">Citric Acid</li>
+            <li class="ing warn">Modified Starch</li>
+            <li class="ing-scan"></li>
+          </ul>
         </div>
+
+        <div class="phone">
+          <img src="images/app-dietary-profile.png" width="917" height="1903" alt="The DecodeFood app's Dietary Profile screen, showing eight diet modes from Omnivore to Soy-Free and an allergy field" fetchpriority="high" />
+          <div class="screen-fx" aria-hidden="true"></div>
+        </div>
+
+        <!-- Looping demo: verdict -->
+        <div class="demo-card verdict" aria-hidden="true">
+          <div class="demo-title">Your result</div>
+          <div class="verdict-badge">● AVOID</div>
+          <div class="verdict-row"><span class="dot r"></span><span><b>Gelatin</b><small>Animal-derived</small></span></div>
+          <div class="verdict-row"><span class="dot a"></span><span><b>Natural Flavors</b><small>Source uncertain</small></span></div>
+          <div class="verdict-row"><span class="dot g"></span><span><b>Citric Acid</b><small>Plant-derived</small></span></div>
+        </div>
+      </div>
+
+      <!-- Finale: appears as the phone blurs away -->
+      <div class="hero-finale">
+        <div class="app-icon" aria-hidden="true">
+          <svg viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="3" height="12" rx="1" fill="#04130a"/><rect x="6" y="1" width="2" height="12" rx="1" fill="#04130a"/><rect x="10" y="1" width="3" height="12" rx="1" fill="#04130a"/></svg>
+        </div>
+        <h2 class="finale-title">Food labels, <em>decoded.</em></h2>
+        <p class="finale-sub">Scan any ingredient list and get the plain-English facts — personalized to your diet and allergies.</p>
+        <div class="hero-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=hero_finale_cta" class="btn btn-lg">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><polygon points="2,1 16,9 2,17" fill="#04130a"/></svg>
+            Download App
+          </a>
+          <a href="#features" class="btn btn-lg btn-white">See how it works</a>
+        </div>
+      </div>
+
+      <div class="hero-fade" aria-hidden="true"></div>
+      <div class="scroll-hint" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-label="Supported diets and allergens">
+    <div class="marquee-track">
+      <span class="chip">Omnivore</span><span class="chip">Vegetarian</span><span class="chip">Vegan</span><span class="chip">Pescatarian</span><span class="chip">Gluten-Free</span><span class="chip">Dairy-Free</span><span class="chip">Nut-Free</span><span class="chip">Soy-Free</span><span class="chip alert">Peanut alert</span><span class="chip alert">Shellfish alert</span><span class="chip alert">Egg alert</span>
+      <span class="chip" aria-hidden="true">Omnivore</span><span class="chip" aria-hidden="true">Vegetarian</span><span class="chip" aria-hidden="true">Vegan</span><span class="chip" aria-hidden="true">Pescatarian</span><span class="chip" aria-hidden="true">Gluten-Free</span><span class="chip" aria-hidden="true">Dairy-Free</span><span class="chip" aria-hidden="true">Nut-Free</span><span class="chip" aria-hidden="true">Soy-Free</span><span class="chip alert" aria-hidden="true">Peanut alert</span><span class="chip alert" aria-hidden="true">Shellfish alert</span><span class="chip alert" aria-hidden="true">Egg alert</span>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <section class="stats" aria-label="DecodeFood at a glance">
+    <div class="container">
+      <div class="stats-grid" data-reveal>
+        <div class="stat"><div class="stat-num"><span data-count="8">8</span></div><div class="stat-label">diet modes</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="4">4</span></div><div class="stat-label">NOVA processing groups</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="0">0</span></div><div class="stat-label">accounts required</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="100">100</span><sup>%</sup></div><div class="stat-label">of your profile stays on-device</div></div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURES -->
-  <section class="features">
+  <!-- FEATURES (bento) -->
+  <section class="section" id="features">
     <div class="container">
-      <div class="section-label">What DecodeFood does</div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h2v10H7zM11 7h2v10h-2zM15 7h2v10h-2z"/></svg>
-          </div>
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">What DecodeFood does</div>
+        <h2 class="h2">Everything you need to read a label like a food scientist.</h2>
+      </div>
+      <div class="bento">
+        <article class="card s4" data-reveal data-spot>
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h2v10H7zM11 7h2v10h-2zM15 7h2v10h-2z"/></svg></div>
           <h3>Scan any label</h3>
           <p>Advanced OCR reads ingredient lists directly from packaging — curved bottles, glossy bags, and everything in between.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          </div>
+        </article>
+        <article class="card s2" data-reveal data-spot style="--i:1">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
           <h3>Personalized diet profiles</h3>
-          <p>Choose your diet mode from 8 options. Add specific allergens, intolerances, and custom flags. Your profile never leaves your device.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
-          </div>
+          <p>Choose from 8 diet modes. Add allergens, intolerances and custom flags. Your profile never leaves your device.</p>
+        </article>
+        <article class="card s2" data-reveal data-spot>
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
           <h3>Science-based explanations</h3>
-          <p>Every flagged ingredient comes with a plain-language breakdown: what it is, why it's there, and what it does to your body.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
+          <p>Every flagged ingredient gets a plain-language breakdown: what it is, why it's there, and what it does to your body.</p>
+        </article>
+        <article class="card s4" data-reveal data-spot style="--i:1">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <h3>Privacy first</h3>
-          <p>No account required. Your dietary profile never leaves your device. Anonymous usage analytics help us improve the app — no personal data, ever. Your dietary profile is stored locally and never transmitted to any server.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-          </div>
+          <p>No account required. Your dietary profile is stored locally and never transmitted to any server. Anonymous usage analytics help us improve the app — no personal data, ever.</p>
+        </article>
+        <article class="card s3" data-reveal data-spot>
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
           <h3>NOVA processing scale</h3>
           <p>Identifies ultra-processed foods using the scientific NOVA framework, with specific reasons — not arbitrary scores.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          </div>
+        </article>
+        <article class="card s3" data-reveal data-spot style="--i:1">
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
           <h3>Barcode + OCR fallback</h3>
-          <p>Scans barcode first for instant lookup. Falls back to direct OCR analysis when no database match exists. You can also type a UPC barcode manually.</p>
-        </div>
+          <p>Scans the barcode first for instant lookup, then falls back to direct OCR analysis when there's no database match. You can also type a UPC manually.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- WHO IT'S FOR -->
-  <section class="who-section">
+  <section class="section" style="padding-top:0">
     <div class="container">
-      <div class="who-inner">
-        <div class="who-text">
-          <div class="section-label">Built for everyone</div>
-          <h2>Groceries just got a lot more transparent.</h2>
-          <p>Whether you're managing a food allergy, following a plant-based diet, or just curious about what "modified starch" actually means — DecodeFood gives you the same clinical lens that food scientists use, right in your pocket.</p>
-          <p>No guesswork. No scare tactics. Just the facts about what's in your cart.</p>
+      <div class="split">
+        <div>
+          <div class="eyebrow" data-reveal>Built for everyone</div>
+          <h2 class="h2" data-reveal style="--i:1">Groceries just got a lot more transparent.</h2>
+          <p class="lede" data-reveal style="--i:2">Whether you're managing a food allergy, following a plant-based diet, or just curious about what "modified starch" actually means — DecodeFood gives you the same clinical lens that food scientists use, right in your pocket.</p>
+          <p class="lede" data-reveal style="--i:3">No guesswork. No scare tactics. Just the facts about what's in your cart.</p>
         </div>
-        <div class="who-illustration">
-          <img
-            src="images/illustration-family.png"
-            alt="Family shopping together in a grocery store"
-            loading="lazy"
-          />
+        <div class="split-media" data-reveal="right">
+          <div class="frame" data-parallax="0.06">
+            <img src="images/illustration-family.png" width="1136" height="746" alt="Family shopping together in a grocery store" loading="lazy" decoding="async" />
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PATTERN DIVIDER -->
-  <div class="pattern-divider">
-    <img src="images/splash-pattern.png" alt="" role="presentation" />
-    <div class="pattern-divider-text">
-      <span>Decoding labels since 2026</span>
-    </div>
-  </div>
-
-  <!-- SCIENCE SECTION -->
-  <section class="science-section">
+  <!-- SCIENCE -->
+  <section class="section" style="background:var(--bg-2);border-block:1px solid var(--line)">
     <div class="container">
-      <div class="science-inner">
-        <div class="science-illustration">
-          <img
-            src="images/illustration-nutritionist.png"
-            alt="Science-based ingredient analysis"
-            loading="lazy"
-          />
-        </div>
-        <div class="science-text">
-          <div class="section-label">The science behind it</div>
-          <h2>Every ingredient explained by the data, not the marketing.</h2>
-          <p>When DecodeFood flags an ingredient, it tells you exactly why — in plain English, backed by regulatory and scientific sources.</p>
-          <div class="science-points">
-            <div class="science-point">
-              <div class="science-point-dot"></div>
-              <span><strong>What it is</strong> — the actual substance and how it's made</span>
-            </div>
-            <div class="science-point">
-              <div class="science-point-dot"></div>
-              <span><strong>Why it's in there</strong> — preservative, thickener, flavoring, filler</span>
-            </div>
-            <div class="science-point">
-              <div class="science-point-dot"></div>
-              <span><strong>What it does</strong> — the honest clinical picture for your body</span>
-            </div>
-            <div class="science-point">
-              <div class="science-point-dot"></div>
-              <span><strong>Your call</strong> — we give you the facts, you make the decision</span>
-            </div>
+      <div class="split flip">
+        <div class="split-media" data-reveal="left">
+          <div class="frame square" data-parallax="-0.05">
+            <img src="images/illustration-nutritionist.png" width="512" height="512" alt="Science-based ingredient analysis" loading="lazy" decoding="async" />
           </div>
+        </div>
+        <div>
+          <div class="eyebrow" data-reveal>The science behind it</div>
+          <h2 class="h2" data-reveal style="--i:1">Every ingredient explained by the data, not the marketing.</h2>
+          <p class="lede" data-reveal style="--i:2">When DecodeFood flags an ingredient, it tells you exactly why — in plain English, backed by regulatory and scientific sources.</p>
+          <ol class="steps" id="steps">
+            <li class="step" data-reveal><strong>What it is</strong> — the actual substance and how it's made</li>
+            <li class="step" data-reveal style="--i:1"><strong>Why it's in there</strong> — preservative, thickener, flavoring, filler</li>
+            <li class="step" data-reveal style="--i:2"><strong>What it does</strong> — the honest clinical picture for your body</li>
+            <li class="step" data-reveal style="--i:3"><strong>Your call</strong> — we give you the facts, you make the decision</li>
+          </ol>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PHILOSOPHY -->
-  <section class="philosophy">
+  <section class="section philosophy">
     <div class="container">
       <div class="philosophy-inner">
-        <div class="philosophy-label">Our philosophy</div>
-        <h2 class="philosophy-headline">Data, Not Fear.</h2>
-        <p class="philosophy-body">
-          Most food apps give you a colored score and tell you what to think. We don't. DecodeFood is an objective translation tool — it converts chemical names and processing jargon into plain English so you can make your own informed decision. We don't label foods "good" or "bad." We don't push you toward buying alternatives. We give you the facts, and we trust you with them.
-        </p>
-        <div class="philosophy-divider"></div>
-        <p class="philosophy-quote">
-          "The expert on your own body is you.<br>We're just here to decode the label."
-        </p>
+        <div class="eyebrow" data-reveal>Our philosophy</div>
+        <h2 class="big-title" data-reveal="scale" style="--i:1">Data, <span>Not Fear.</span></h2>
+        <p class="philosophy-body" id="lit">Most food apps give you a colored score and tell you what to think. We don't. DecodeFood is an objective translation tool — it converts chemical names and processing jargon into plain English so you can make your own informed decision. We don't label foods "good" or "bad." We don't push you toward buying alternatives. We give you the facts, and we trust you with them.</p>
+        <p class="quote" data-reveal>"The expert on your own body is you.<br>We're just here to decode the label."</p>
       </div>
     </div>
   </section>
 
-  <!-- COMMUNITY SECTION -->
-  <section class="community-section">
+  <!-- COMMUNITY -->
+  <section class="section" style="padding-top:0">
     <div class="container">
-      <div class="community-inner">
-        <div class="community-text">
-          <div class="section-label">For every kind of shopper</div>
-          <h2>Your diet. Your rules. Your data.</h2>
-          <p>From the vegan checking for hidden gelatin to the parent scanning a snack for their peanut-allergic child — DecodeFood works for your specific situation, not a generic average.</p>
-          <p>Set your profile once. Every scan after that is personalized to exactly what matters to you.</p>
-          <div style="margin-top:32px;">
+      <div class="split flip">
+        <div class="split-media" data-reveal="left">
+          <div class="frame" data-parallax="0.05">
+            <img src="images/illustration-people.png" width="3000" height="2000" alt="Diverse group of grocery shoppers" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div>
+          <div class="eyebrow" data-reveal>For every kind of shopper</div>
+          <h2 class="h2" data-reveal style="--i:1">Your diet. Your rules. Your data.</h2>
+          <p class="lede" data-reveal style="--i:2">From the vegan checking for hidden gelatin to the parent scanning a snack for their peanut-allergic child — DecodeFood works for your specific situation, not a generic average.</p>
+          <p class="lede" data-reveal style="--i:3">Set your profile once. Every scan after that is personalized to exactly what matters to you.</p>
+          <div data-reveal style="--i:4;margin-top:32px">
             <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=community_cta" class="btn">
-              <span aria-hidden="true" style="display:inline-flex;align-items:center;">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <polygon points="2,1 16,9 2,17" fill="white"/>
-                </svg>
-              </span>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><polygon points="2,1 16,9 2,17" fill="#04130a"/></svg>
               Download on Google Play
             </a>
           </div>
         </div>
-        <div class="community-illustration">
-          <img
-            src="images/illustration-people.png"
-            alt="Diverse group of grocery shoppers"
-            loading="lazy"
-          />
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="cta-banner">
+  <!-- CTA -->
+  <section class="cta">
     <div class="container">
-      <div class="cta-inner">
+      <div class="cta-box" data-reveal="scale">
         <h2>Ready to start decoding?</h2>
         <p>Free to download. No account required.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=footer_cta" class="btn btn-lg btn-white">
-          <span aria-hidden="true" style="display:inline-flex;align-items:center;">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <polygon points="2,1 16,9 2,17" fill="#16a34a"/>
-            </svg>
-          </span>
+        <a href="https://play.google.com/store/apps/details?id=com.decode.food&hl=en_US&referrer=utm_source=website&utm_medium=button&utm_campaign=footer_cta" class="btn btn-lg">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><polygon points="2,1 16,9 2,17" fill="#04130a"/></svg>
           Download on Google Play
         </a>
       </div>
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="/" class="nav-logo">
-            <div class="logo-icon">
+          <a href="/" class="logo">
+            <span class="logo-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <rect x="1" y="1" width="3" height="12" rx="1" fill="white"/>
-                <rect x="6" y="1" width="2" height="12" rx="1" fill="white"/>
-                <rect x="10" y="1" width="3" height="12" rx="1" fill="white"/>
+                <rect x="1" y="1" width="3" height="12" rx="1" fill="#04130a"/>
+                <rect x="6" y="1" width="2" height="12" rx="1" fill="#04130a"/>
+                <rect x="10" y="1" width="3" height="12" rx="1" fill="#04130a"/>
               </svg>
-            </div>
+            </span>
             <span>DecodeFood</span>
           </a>
           <p>Empowering consumers with clinical transparency. Scan labels, understand ingredients, make informed choices.</p>
@@ -554,6 +379,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>
