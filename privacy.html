@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — DecodeFood</title>
-  <meta name="description" content="DecodeFood's privacy policy. Your dietary profile is stored locally on your device and never uploaded to any server. No account required. No data collected." />
+  <meta name="description" content="DecodeFood's privacy policy. Your dietary profile is stored locally on your device and never uploaded to any server. No account required. Only anonymous usage analytics and crash reports are collected." />
   <link rel="canonical" href="https://decodefood.app/privacy" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://decodefood.app/privacy" />
   <meta property="og:title" content="Privacy Policy — DecodeFood" />
-  <meta property="og:description" content="Your data never leaves your device. No account required. No personal information collected." />
+  <meta property="og:description" content="Your dietary profile never leaves your device. No account required. Only anonymous usage analytics and crash reports." />
   <meta property="og:site_name" content="DecodeFood" />
   <meta name="robots" content="noindex, follow" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -72,13 +72,13 @@
       <div class="page-header">
         <div class="section-label">Legal</div>
         <h1 class="page-title">Privacy Policy</h1>
-        <p class="page-effective">Effective Date: March 30, 2026</p>
+        <p class="page-effective">Effective Date: October 19, 2026</p>
       </div>
 
       <div class="legal-content">
 
         <div class="legal-callout green">
-          <strong>The short version:</strong> DecodeFood does not require an account, does not collect your personal information or dietary data, and does not upload your dietary profile to any server. Anonymous usage analytics help us improve the app — no names, no health data, ever. Everything personal stays on your device.
+          <strong>The short version:</strong> DecodeFood does not require an account, does not collect your personal information or dietary data, and does not upload your dietary profile to any server. Anonymous usage analytics and crash reports help us improve the app — no names, no health data, ever, and you can turn analytics and crash reports off in the app. Everything personal stays on your device.
         </div>
 
         <section class="legal-section">
@@ -100,13 +100,16 @@
           <p>When you scan a product barcode, the barcode number is sent to the Open Food Facts API (a non-profit, open-source database) to retrieve ingredient information. If Open Food Facts does not have a match, the barcode number is then sent to the USDA Branded Foods API (a public database maintained by the U.S. Department of Agriculture) as a fallback. The barcode number itself does not contain any personally identifiable information. No user profile data is included in either request.</p>
 
           <h3>2.4 In-App Usage Analytics</h3>
-          <p>DecodeFood uses Firebase Analytics (provided by Google) to collect anonymous, non-identifiable usage statistics within the app. This data helps us understand how the app is used so we can improve it.</p>
-          <p><strong>What is collected:</strong> Anonymous event data such as feature interactions (e.g., "scan started," "paywall viewed"), app open counts, and session duration. Events are tagged with an anonymous device identifier — not your name, email, or any personal information.</p>
-          <p><strong>What is never collected:</strong> Your dietary profile, your allergen or intolerance data, your custom flags, your scan history, or any ingredient data you enter into the app.</p>
-          <p><strong>Where it is stored:</strong> Anonymous analytics data is stored on Google's servers in accordance with Google's Privacy Policy (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>).</p>
-          <p><strong>Your control:</strong> You can reset your anonymous analytics identifier at any time in the app under Settings → Dietary Profile → Privacy & Data → Reset Analytics ID. This permanently unlinks all past usage events from your device and assigns a new anonymous identifier going forward.</p>
+          <p>DecodeFood uses two analytics services to collect anonymous usage statistics within the app: <strong>Firebase Analytics</strong> (provided by Google) and <strong>PostHog</strong> (provided by PostHog, Inc., with servers in the United States). This data helps us understand how the app is used so we can improve it.</p>
+          <p><strong>What is collected:</strong> Anonymous event data such as screens opened, whether a scan started or finished or failed, the overall result category shown (for example "good" or "caution"), which ingredient explanation was opened, subscription-related actions (for example "paywall viewed" and the plan chosen), app opens, and session duration. Events are tagged with a random anonymous device identifier — not your name, email, or any personal information. PostHog receives your device's IP address as part of the internet connection, but we configure PostHog to discard it rather than store it with your events.</p>
+          <p><strong>What is never collected:</strong> Your dietary profile, your allergen or intolerance data, your custom flags, your scan history, ingredient lists you scan or enter, photos, or barcodes. The only food-related text that can be included is the name of an ingredient you tapped to read about.</p>
+          <p><strong>Where it is stored:</strong> Firebase Analytics data is stored on Google's servers in accordance with Google's Privacy Policy (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>). PostHog data is stored on PostHog's servers in the United States in accordance with PostHog's Privacy Policy (<a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a>).</p>
+          <p><strong>Your control:</strong> In the app, go to Settings &rarr; Dietary Profile &rarr; Privacy &amp; Data and turn off <strong>Share anonymous usage data</strong> to stop analytics collection by both services. When you change this switch, one event recording the change is sent; after that, no further analytics events are sent while it is off. You can also reset your anonymous analytics identifier at any time under the same screen with <strong>Reset Analytics ID</strong>. This assigns a new anonymous identifier to both services and unlinks future events from your earlier ones.</p>
 
-          <h3>2.5 Website Analytics</h3>
+          <h3>2.5 Crash Reports</h3>
+          <p>DecodeFood uses <strong>Firebase Crashlytics</strong> (provided by Google) to receive technical reports when the app crashes. A crash report contains information such as the app version, device model, Android version, the technical details of the error, and an anonymous installation identifier. It does not contain your dietary profile or the contents of your scans. You can turn crash reports off at any time in the app under Settings &rarr; Dietary Profile &rarr; Privacy &amp; Data &rarr; <strong>Share crash reports</strong>; this is separate from the usage-analytics switch. Crashlytics data is handled in accordance with Google's Privacy Policy and is retained by Google for up to 90 days.</p>
+
+<h3>2.6 Website Analytics</h3>
           <p>The DecodeFood website uses Google Analytics to collect anonymous page visit and navigation data. This is separate from in-app analytics. You can opt out using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</p>
         </section>
 
@@ -117,7 +120,10 @@
             <li>Your profile remains on your device until you modify it in the app or uninstall the app.</li>
             <li>Because we do not store your data on any server, we cannot recover your profile if the app is deleted.</li>
             <li>You have the right to delete your data at any time by clearing the app's data in your Android device settings, or by uninstalling the app.</li>
-            <li>Anonymous analytics data transmitted to Firebase Analytics is retained by Google for up to 14 months by default, after which it is automatically deleted from Google's servers. You can reset your anonymous analytics ID at any time within the app, which immediately dissociates all past events from your device.</li>
+            <li>Anonymous analytics data transmitted to Firebase Analytics is retained by Google for up to 14 months by default, after which it is automatically deleted from Google's servers.</li>
+            <li>Anonymous analytics events sent to PostHog are kept on PostHog's servers only as long as needed for product analytics.</li>
+            <li>Crash reports sent to Firebase Crashlytics are retained by Google for up to 90 days.</li>
+            <li>You can reset your anonymous analytics ID at any time within the app, which stops new events from being linked to your earlier ones.</li>
           </ul>
         </section>
 
@@ -127,9 +133,11 @@
           <ul>
             <li><strong>Open Food Facts</strong> — an open-source, non-profit food product database. Barcode numbers are sent to this service during barcode scans. No personal data is included. Open Food Facts has its own Privacy Policy available at <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">world.openfoodfacts.org/privacy</a>.</li>
             <li><strong>USDA Branded Foods API</strong> — a public database maintained by the U.S. Department of Agriculture. Barcode numbers are sent to this service only when Open Food Facts returns no result. No personal data is included. This service is operated by the U.S. federal government under api.data.gov.</li>
+            <li><strong>PostHog</strong> — a product analytics service. Receives the anonymous usage events described in section 2.4, tagged with a random anonymous identifier, and, as part of the connection, the device IP address (which we configure PostHog to discard rather than store). No account, name, email, dietary profile or scan content is sent. PostHog's Privacy Policy is available at <a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a>.</li>
+            <li><strong>Firebase Analytics and Firebase Crashlytics (Google)</strong> — anonymous usage statistics (section 2.4) and crash reports (section 2.5), subject to Google's Privacy Policy.</li>
             <li><strong>Google Play Billing</strong> — used to process in-app subscription purchases (DecodeFood Premium). Payment information is handled entirely by Google Play and is subject to Google's Privacy Policy. DecodeFood does not receive, store, or process payment card details directly.</li>
           </ul>
-          <p>We do not use advertising networks, social login SDKs, or any other third-party service that collects personal data.</p>
+          <p>We do not use advertising networks or social login SDKs. The only third-party services that receive data from the app are those listed above, and none of them receives your dietary profile or your scan content.</p>
         </section>
 
         <section class="legal-section">
@@ -153,7 +161,7 @@
             <li>Access your profile data at any time within the app's Dietary Profile screen</li>
             <li>Modify or delete any profile data within the app</li>
             <li>Delete all app data by clearing storage in Android Settings → Apps → DecodeFood → Storage → Clear Data</li>
-            <li>Manage your data directly within the app under Settings → Dietary Profile → Privacy & Data — reset your analytics ID, clear your scan history, or delete all app data with a single action.</li>
+            <li>Manage your data directly within the app under Settings → Dietary Profile → Privacy & Data — turn off anonymous usage analytics or crash reports, reset your analytics ID, clear your scan history, or delete all app data with a single action.</li>
             <li>Request deletion by uninstalling the app (all local data is removed)</li>
           </ul>
           <p>For any questions about your rights or this policy, contact us at <a href="mailto:hello@decodefood.app">hello@decodefood.app</a>.</p>
